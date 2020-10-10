@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: yc-repertory-server-webapp-provider
+  cloud:
+    nacos:
+      config:
+        server-addr: 192.168.31.75:8848

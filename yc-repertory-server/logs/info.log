@@ -1,0 +1,683 @@
+2020-10-10 10:54:17.396 [main] INFO  c.a.n.c.c.i.LocalConfigInfoProcessor -LOCAL_SNAPSHOT_PATH:C:\Users\123\nacos\config
+2020-10-10 10:54:17.430 [main] INFO  c.a.nacos.client.config.impl.Limiter -limitTime:5.0
+2020-10-10 10:54:19.445 [main] ERROR c.a.n.c.config.http.ServerHttpAgent -[NACOS SocketTimeoutException httpGet] currentServerAddr:http://192.168.31.75:8848， err : connect timed out
+2020-10-10 10:54:21.449 [main] ERROR c.a.n.c.config.http.ServerHttpAgent -[NACOS SocketTimeoutException httpGet] currentServerAddr:http://192.168.31.75:8848， err : connect timed out
+2020-10-10 10:54:21.451 [main] ERROR c.a.n.c.config.http.ServerHttpAgent -no available server
+2020-10-10 10:54:21.466 [main] ERROR c.a.n.c.config.impl.ClientWorker -[fixed-192.168.31.75_8848] [sub-server] get server config exception, dataId=yc-product-server-webapp-provider, group=DEFAULT_GROUP, tenant=
+java.net.ConnectException: no available server
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpGet(ServerHttpAgent.java:123)
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpGet(MetricsHttpAgent.java:48)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.getServerConfig(ClientWorker.java:230)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfigInner(NacosConfigService.java:143)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfig(NacosConfigService.java:92)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.loadNacosData(NacosPropertySourceBuilder.java:85)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.build(NacosPropertySourceBuilder.java:74)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosPropertySource(NacosPropertySourceLocator.java:204)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosDataIfPresent(NacosPropertySourceLocator.java:191)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadApplicationConfiguration(NacosPropertySourceLocator.java:142)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.locate(NacosPropertySourceLocator.java:103)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:52)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:47)
+	at org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration.initialize(PropertySourceBootstrapConfiguration.java:98)
+	at org.springframework.boot.SpringApplication.applyInitializers(SpringApplication.java:626)
+	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:370)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.artcreation.group.product.YcProductWebappProviderApplication.main(YcProductWebappProviderApplication.java:14)
+2020-10-10 10:54:21.471 [main] WARN  c.a.n.c.config.NacosConfigService -[fixed-192.168.31.75_8848] [get-config] get from server error, dataId=yc-product-server-webapp-provider, group=DEFAULT_GROUP, tenant=, msg=ErrCode:500, ErrMsg:no available server
+2020-10-10 10:54:21.471 [main] WARN  c.a.n.c.config.NacosConfigService -[fixed-192.168.31.75_8848] [get-config] get snapshot ok, dataId=yc-product-server-webapp-provider, group=DEFAULT_GROUP, tenant=, config=
+2020-10-10 10:54:21.472 [main] WARN  c.a.c.n.c.NacosPropertySourceBuilder -Ignore the empty nacos configuration and get it based on dataId[yc-product-server-webapp-provider] & group[DEFAULT_GROUP]
+2020-10-10 10:54:23.474 [main] ERROR c.a.n.c.config.http.ServerHttpAgent -[NACOS SocketTimeoutException httpGet] currentServerAddr:http://192.168.31.75:8848， err : connect timed out
+2020-10-10 10:54:25.476 [main] ERROR c.a.n.c.config.http.ServerHttpAgent -[NACOS SocketTimeoutException httpGet] currentServerAddr:http://192.168.31.75:8848， err : connect timed out
+2020-10-10 10:54:25.476 [main] ERROR c.a.n.c.config.http.ServerHttpAgent -no available server
+2020-10-10 10:54:25.476 [main] ERROR c.a.n.c.config.impl.ClientWorker -[fixed-192.168.31.75_8848] [sub-server] get server config exception, dataId=yc-product-server-webapp-provider.properties, group=DEFAULT_GROUP, tenant=
+java.net.ConnectException: no available server
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpGet(ServerHttpAgent.java:123)
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpGet(MetricsHttpAgent.java:48)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.getServerConfig(ClientWorker.java:230)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfigInner(NacosConfigService.java:143)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfig(NacosConfigService.java:92)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.loadNacosData(NacosPropertySourceBuilder.java:85)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.build(NacosPropertySourceBuilder.java:74)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosPropertySource(NacosPropertySourceLocator.java:204)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosDataIfPresent(NacosPropertySourceLocator.java:191)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadApplicationConfiguration(NacosPropertySourceLocator.java:145)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.locate(NacosPropertySourceLocator.java:103)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:52)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:47)
+	at org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration.initialize(PropertySourceBootstrapConfiguration.java:98)
+	at org.springframework.boot.SpringApplication.applyInitializers(SpringApplication.java:626)
+	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:370)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.artcreation.group.product.YcProductWebappProviderApplication.main(YcProductWebappProviderApplication.java:14)
+2020-10-10 10:54:25.477 [main] WARN  c.a.n.c.config.NacosConfigService -[fixed-192.168.31.75_8848] [get-config] get from server error, dataId=yc-product-server-webapp-provider.properties, group=DEFAULT_GROUP, tenant=, msg=ErrCode:500, ErrMsg:no available server
+2020-10-10 10:54:25.477 [main] WARN  c.a.n.c.config.NacosConfigService -[fixed-192.168.31.75_8848] [get-config] get snapshot ok, dataId=yc-product-server-webapp-provider.properties, group=DEFAULT_GROUP, tenant=, config=
+2020-10-10 10:54:25.477 [main] WARN  c.a.c.n.c.NacosPropertySourceBuilder -Ignore the empty nacos configuration and get it based on dataId[yc-product-server-webapp-provider.properties] & group[DEFAULT_GROUP]
+2020-10-10 10:54:25.478 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration -Located property source: [BootstrapPropertySource {name='bootstrapProperties-yc-product-server-webapp-provider.properties,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-yc-product-server-webapp-provider,DEFAULT_GROUP'}]
+2020-10-10 10:54:25.481 [main] INFO  c.a.g.p.YcProductWebappProviderApplication -No active profile set, falling back to default profiles: default
+2020-10-10 10:54:26.089 [main] WARN  o.s.boot.actuate.endpoint.EndpointId -Endpoint ID 'nacos-config' contains invalid characters, please migrate to a valid format.
+2020-10-10 10:54:26.092 [main] WARN  o.s.boot.actuate.endpoint.EndpointId -Endpoint ID 'nacos-discovery' contains invalid characters, please migrate to a valid format.
+2020-10-10 10:54:26.212 [main] WARN  o.s.boot.actuate.endpoint.EndpointId -Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-10-10 10:54:26.302 [main] INFO  o.s.cloud.context.scope.GenericScope -BeanFactory id=437a39e5-7459-370e-b3a8-0c4c0abdc29b
+2020-10-10 10:54:26.561 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat initialized with port(s): 9005 (http)
+2020-10-10 10:54:26.568 [main] INFO  o.a.catalina.core.StandardService -Starting service [Tomcat]
+2020-10-10 10:54:26.568 [main] INFO  o.a.catalina.core.StandardEngine -Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-10-10 10:54:26.655 [main] INFO  o.a.c.c.C.[.[localhost].[/product] -Initializing Spring embedded WebApplicationContext
+2020-10-10 10:54:26.655 [main] INFO  o.s.web.context.ContextLoader -Root WebApplicationContext: initialization completed in 1160 ms
+2020-10-10 10:54:26.795 [main] INFO  com.alibaba.nacos.client.naming -initializer namespace from System Property :null
+2020-10-10 10:54:26.796 [main] INFO  com.alibaba.nacos.client.naming -initializer namespace from System Environment :null
+2020-10-10 10:54:26.796 [main] INFO  com.alibaba.nacos.client.naming -initializer namespace from System Property :null
+2020-10-10 10:54:27.160 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver -Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-10-10 10:54:27.196 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping -Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-10-10 10:54:27.207 [main] WARN  c.n.c.sources.URLConfigurationSource -No URLs will be polled as dynamic configuration sources.
+2020-10-10 10:54:27.208 [main] INFO  c.n.c.sources.URLConfigurationSource -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-10-10 10:54:27.211 [main] WARN  c.n.c.sources.URLConfigurationSource -No URLs will be polled as dynamic configuration sources.
+2020-10-10 10:54:27.211 [main] INFO  c.n.c.sources.URLConfigurationSource -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-10-10 10:54:27.277 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor -Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-10 10:54:27.339 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler -Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2020-10-10 10:54:27.512 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper -Context refreshed
+2020-10-10 10:54:27.523 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper -Found 1 custom documentation plugin(s)
+2020-10-10 10:54:27.542 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner -Scanning for api listing references
+2020-10-10 10:54:27.643 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat started on port(s): 9005 (http) with context path '/product'
+2020-10-10 10:54:27.645 [main] INFO  com.alibaba.nacos.client.naming -[BEAT] adding beat: {"cluster":"DEFAULT","ip":"192.168.31.75","metadata":{"preserved.register.source":"SPRING_CLOUD"},"period":5000,"port":9005,"scheduled":false,"serviceName":"DEFAULT_GROUP@@yc-product-server-webapp-provider","stopped":false,"weight":1.0} to beat map.
+2020-10-10 10:54:27.696 [main] INFO  com.alibaba.nacos.client.naming -[REGISTER-SERVICE] public registering service DEFAULT_GROUP@@yc-product-server-webapp-provider with instance: {"clusterName":"DEFAULT","enabled":true,"ephemeral":true,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ip":"192.168.31.75","ipDeleteTimeout":30000,"metadata":{"preserved.register.source":"SPRING_CLOUD"},"port":9005,"weight":1.0}
+2020-10-10 10:54:29.712 [main] WARN  com.alibaba.nacos.client.naming -failed to request http://192.168.31.75:8848/nacos/v1/ns/instance?app=unknown&metadata=%7B%22preserved.register.source%22%3A%22SPRING_CLOUD%22%7D&ip=192.168.31.75&weight=1.0&ephemeral=true&serviceName=DEFAULT_GROUP%40%40yc-product-server-webapp-provider&encoding=UTF-8&groupName=DEFAULT_GROUP&namespaceId=public&port=9005&enable=true&healthy=true&clusterName=DEFAULT from 192.168.31.75
+2020-10-10 10:54:29.714 [main] ERROR com.alibaba.nacos.client.naming -[NA] failed to request 
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at com.alibaba.nacos.client.naming.net.HttpClient.request(HttpClient.java:86)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:433)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:468)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:401)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:397)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.registerService(NamingProxy.java:212)
+	at com.alibaba.nacos.client.naming.NacosNamingService.registerInstance(NacosNamingService.java:207)
+	at com.alibaba.cloud.nacos.registry.NacosServiceRegistry.register(NacosServiceRegistry.java:64)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.register(AbstractAutoServiceRegistration.java:239)
+	at com.alibaba.cloud.nacos.registry.NacosAutoServiceRegistration.register(NacosAutoServiceRegistration.java:76)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.start(AbstractAutoServiceRegistration.java:138)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.bind(AbstractAutoServiceRegistration.java:101)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:88)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:47)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:403)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:360)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:165)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:553)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.artcreation.group.product.YcProductWebappProviderApplication.main(YcProductWebappProviderApplication.java:14)
+2020-10-10 10:54:33.734 [main] WARN  com.alibaba.nacos.client.naming -failed to request http://192.168.31.75:8848/nacos/v1/ns/instance?app=unknown&metadata=%7B%22preserved.register.source%22%3A%22SPRING_CLOUD%22%7D&ip=192.168.31.75&weight=1.0&ephemeral=true&serviceName=DEFAULT_GROUP%40%40yc-product-server-webapp-provider&encoding=UTF-8&groupName=DEFAULT_GROUP&namespaceId=public&port=9005&enable=true&healthy=true&clusterName=DEFAULT from 192.168.31.75
+2020-10-10 10:54:33.734 [main] ERROR com.alibaba.nacos.client.naming -[NA] failed to request 
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at com.alibaba.nacos.client.naming.net.HttpClient.request(HttpClient.java:86)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:433)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:482)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:401)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:397)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.registerService(NamingProxy.java:212)
+	at com.alibaba.nacos.client.naming.NacosNamingService.registerInstance(NacosNamingService.java:207)
+	at com.alibaba.cloud.nacos.registry.NacosServiceRegistry.register(NacosServiceRegistry.java:64)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.register(AbstractAutoServiceRegistration.java:239)
+	at com.alibaba.cloud.nacos.registry.NacosAutoServiceRegistration.register(NacosAutoServiceRegistration.java:76)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.start(AbstractAutoServiceRegistration.java:138)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.bind(AbstractAutoServiceRegistration.java:101)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:88)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:47)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:403)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:360)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:165)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:553)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.artcreation.group.product.YcProductWebappProviderApplication.main(YcProductWebappProviderApplication.java:14)
+2020-10-10 10:54:34.711 [com.alibaba.nacos.naming.beat.sender] WARN  com.alibaba.nacos.client.naming -failed to request http://192.168.31.75:8848/nacos/v1/ns/instance/beat?app=unknown&namespaceId=public&port=9005&clusterName=DEFAULT&ip=192.168.31.75&serviceName=DEFAULT_GROUP%40%40yc-product-server-webapp-provider&encoding=UTF-8 from 192.168.31.75
+2020-10-10 10:54:34.711 [com.alibaba.nacos.naming.beat.sender] ERROR com.alibaba.nacos.client.naming -[NA] failed to request 
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1334)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1309)
+	at com.alibaba.nacos.client.naming.net.HttpClient.request(HttpClient.java:82)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:433)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:468)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:401)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.sendBeat(NamingProxy.java:343)
+	at com.alibaba.nacos.client.naming.beat.BeatReactor$BeatTask.run(BeatReactor.java:108)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-10-10 10:54:37.770 [main] WARN  com.alibaba.nacos.client.naming -failed to request http://192.168.31.75:8848/nacos/v1/ns/instance?app=unknown&metadata=%7B%22preserved.register.source%22%3A%22SPRING_CLOUD%22%7D&ip=192.168.31.75&weight=1.0&ephemeral=true&serviceName=DEFAULT_GROUP%40%40yc-product-server-webapp-provider&encoding=UTF-8&groupName=DEFAULT_GROUP&namespaceId=public&port=9005&enable=true&healthy=true&clusterName=DEFAULT from 192.168.31.75
+2020-10-10 10:54:37.770 [main] ERROR com.alibaba.nacos.client.naming -[NA] failed to request 
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at com.alibaba.nacos.client.naming.net.HttpClient.request(HttpClient.java:86)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:433)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:482)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:401)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:397)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.registerService(NamingProxy.java:212)
+	at com.alibaba.nacos.client.naming.NacosNamingService.registerInstance(NacosNamingService.java:207)
+	at com.alibaba.cloud.nacos.registry.NacosServiceRegistry.register(NacosServiceRegistry.java:64)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.register(AbstractAutoServiceRegistration.java:239)
+	at com.alibaba.cloud.nacos.registry.NacosAutoServiceRegistration.register(NacosAutoServiceRegistration.java:76)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.start(AbstractAutoServiceRegistration.java:138)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.bind(AbstractAutoServiceRegistration.java:101)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:88)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:47)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:403)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:360)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:165)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:553)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.artcreation.group.product.YcProductWebappProviderApplication.main(YcProductWebappProviderApplication.java:14)
+2020-10-10 10:54:38.738 [com.alibaba.nacos.naming.beat.sender] WARN  com.alibaba.nacos.client.naming -failed to request http://192.168.31.75:8848/nacos/v1/ns/instance/beat?app=unknown&namespaceId=public&port=9005&clusterName=DEFAULT&ip=192.168.31.75&serviceName=DEFAULT_GROUP%40%40yc-product-server-webapp-provider&encoding=UTF-8 from 192.168.31.75
+2020-10-10 10:54:38.738 [com.alibaba.nacos.naming.beat.sender] ERROR com.alibaba.nacos.client.naming -[NA] failed to request 
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1334)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1309)
+	at com.alibaba.nacos.client.naming.net.HttpClient.request(HttpClient.java:82)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:433)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:482)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:401)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.sendBeat(NamingProxy.java:343)
+	at com.alibaba.nacos.client.naming.beat.BeatReactor$BeatTask.run(BeatReactor.java:108)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-10-10 10:54:41.795 [main] WARN  com.alibaba.nacos.client.naming -failed to request http://192.168.31.75:8848/nacos/v1/ns/instance?app=unknown&metadata=%7B%22preserved.register.source%22%3A%22SPRING_CLOUD%22%7D&ip=192.168.31.75&weight=1.0&ephemeral=true&serviceName=DEFAULT_GROUP%40%40yc-product-server-webapp-provider&encoding=UTF-8&groupName=DEFAULT_GROUP&namespaceId=public&port=9005&enable=true&healthy=true&clusterName=DEFAULT from 192.168.31.75
+2020-10-10 10:54:41.795 [main] ERROR com.alibaba.nacos.client.naming -[NA] failed to request 
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at com.alibaba.nacos.client.naming.net.HttpClient.request(HttpClient.java:86)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:433)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:482)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:401)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:397)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.registerService(NamingProxy.java:212)
+	at com.alibaba.nacos.client.naming.NacosNamingService.registerInstance(NacosNamingService.java:207)
+	at com.alibaba.cloud.nacos.registry.NacosServiceRegistry.register(NacosServiceRegistry.java:64)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.register(AbstractAutoServiceRegistration.java:239)
+	at com.alibaba.cloud.nacos.registry.NacosAutoServiceRegistration.register(NacosAutoServiceRegistration.java:76)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.start(AbstractAutoServiceRegistration.java:138)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.bind(AbstractAutoServiceRegistration.java:101)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:88)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:47)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:403)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:360)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:165)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:553)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.artcreation.group.product.YcProductWebappProviderApplication.main(YcProductWebappProviderApplication.java:14)
+2020-10-10 10:54:42.753 [com.alibaba.nacos.naming.beat.sender] WARN  com.alibaba.nacos.client.naming -failed to request http://192.168.31.75:8848/nacos/v1/ns/instance/beat?app=unknown&namespaceId=public&port=9005&clusterName=DEFAULT&ip=192.168.31.75&serviceName=DEFAULT_GROUP%40%40yc-product-server-webapp-provider&encoding=UTF-8 from 192.168.31.75
+2020-10-10 10:54:42.753 [com.alibaba.nacos.naming.beat.sender] ERROR com.alibaba.nacos.client.naming -[NA] failed to request 
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1334)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1309)
+	at com.alibaba.nacos.client.naming.net.HttpClient.request(HttpClient.java:82)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:433)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:482)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:401)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.sendBeat(NamingProxy.java:343)
+	at com.alibaba.nacos.client.naming.beat.BeatReactor$BeatTask.run(BeatReactor.java:108)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-10-10 10:54:43.806 [main] ERROR com.alibaba.nacos.client.naming -request: /nacos/v1/ns/instance failed, servers: [192.168.31.75:8848], code: 500, msg: java.net.ConnectException: Connection refused: connect
+2020-10-10 10:54:43.806 [main] ERROR c.a.c.n.r.NacosServiceRegistry -nacos registry, yc-product-server-webapp-provider register failed...NacosRegistration{nacosDiscoveryProperties=NacosDiscoveryProperties{serverAddr='192.168.31.75:8848', endpoint='', namespace='', watchDelay=30000, logName='', service='yc-product-server-webapp-provider', weight=1.0, clusterName='DEFAULT', group='DEFAULT_GROUP', namingLoadCacheAtStart='false', metadata={preserved.register.source=SPRING_CLOUD}, registerEnabled=true, ip='192.168.31.75', networkInterface='', port=9005, secure=false, accessKey='', secretKey='', heartBeatInterval=null, heartBeatTimeout=null, ipDeleteTimeout=null}},
+com.alibaba.nacos.api.exception.NacosException: failed to req API:/api//nacos/v1/ns/instance after all servers([192.168.31.75:8848]) tried: java.net.ConnectException: Connection refused: connect
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:496)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:401)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:397)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.registerService(NamingProxy.java:212)
+	at com.alibaba.nacos.client.naming.NacosNamingService.registerInstance(NacosNamingService.java:207)
+	at com.alibaba.cloud.nacos.registry.NacosServiceRegistry.register(NacosServiceRegistry.java:64)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.register(AbstractAutoServiceRegistration.java:239)
+	at com.alibaba.cloud.nacos.registry.NacosAutoServiceRegistration.register(NacosAutoServiceRegistration.java:76)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.start(AbstractAutoServiceRegistration.java:138)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.bind(AbstractAutoServiceRegistration.java:101)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:88)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:47)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:403)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:360)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:165)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:553)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.artcreation.group.product.YcProductWebappProviderApplication.main(YcProductWebappProviderApplication.java:14)
+2020-10-10 10:54:43.844 [main] INFO  o.a.catalina.core.StandardService -Stopping service [Tomcat]
+2020-10-10 10:54:43.848 [main] WARN  o.a.c.loader.WebappClassLoaderBase -The web application [product] appears to have started a thread named [spring.cloud.inetutils] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+ java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+2020-10-10 10:54:43.848 [main] WARN  o.a.c.loader.WebappClassLoaderBase -The web application [product] appears to have started a thread named [com.alibaba.nacos.naming.client.listener] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+ com.alibaba.nacos.client.naming.core.EventDispatcher$Notifier.run(EventDispatcher.java:118)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+2020-10-10 10:54:43.849 [main] WARN  o.a.c.loader.WebappClassLoaderBase -The web application [product] appears to have started a thread named [com.alibaba.nacos.client.naming.updater] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1088)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+2020-10-10 10:54:43.849 [main] WARN  o.a.c.loader.WebappClassLoaderBase -The web application [product] appears to have started a thread named [com.alibaba.nacos.client.naming.updater] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+2020-10-10 10:54:43.849 [main] WARN  o.a.c.loader.WebappClassLoaderBase -The web application [product] appears to have started a thread named [com.alibaba.nacos.naming.failover] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+2020-10-10 10:54:43.850 [main] WARN  o.a.c.loader.WebappClassLoaderBase -The web application [product] appears to have started a thread named [com.alibaba.nacos.naming.push.receiver] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.net.DualStackPlainDatagramSocketImpl.socketReceiveOrPeekData(Native Method)
+ java.net.DualStackPlainDatagramSocketImpl.receive0(DualStackPlainDatagramSocketImpl.java:124)
+ java.net.AbstractPlainDatagramSocketImpl.receive(AbstractPlainDatagramSocketImpl.java:143)
+ java.net.DatagramSocket.receive(DatagramSocket.java:812)
+ com.alibaba.nacos.client.naming.core.PushReceiver.run(PushReceiver.java:73)
+ java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+ java.util.concurrent.FutureTask.run(FutureTask.java:266)
+ java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+ java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+2020-10-10 10:54:43.854 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener -
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-10-10 10:54:43.856 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler -Shutting down ExecutorService 'Nacso-Watch-Task-Scheduler'
+2020-10-10 10:54:43.856 [main] WARN  o.s.b.f.s.DisposableBeanAdapter -Invocation of destroy method failed on bean with name 'tomcatMetricsBinder': java.lang.NullPointerException
+2020-10-10 10:54:43.857 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor -Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-10 10:54:43.865 [main] ERROR o.s.boot.SpringApplication -Application run failed
+java.lang.reflect.UndeclaredThrowableException: null
+	at org.springframework.util.ReflectionUtils.rethrowRuntimeException(ReflectionUtils.java:147)
+	at com.alibaba.cloud.nacos.registry.NacosServiceRegistry.register(NacosServiceRegistry.java:73)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.register(AbstractAutoServiceRegistration.java:239)
+	at com.alibaba.cloud.nacos.registry.NacosAutoServiceRegistration.register(NacosAutoServiceRegistration.java:76)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.start(AbstractAutoServiceRegistration.java:138)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.bind(AbstractAutoServiceRegistration.java:101)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:88)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:47)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:403)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:360)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:165)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:553)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.artcreation.group.product.YcProductWebappProviderApplication.main(YcProductWebappProviderApplication.java:14)
+Caused by: com.alibaba.nacos.api.exception.NacosException: failed to req API:/api//nacos/v1/ns/instance after all servers([192.168.31.75:8848]) tried: java.net.ConnectException: Connection refused: connect
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:496)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:401)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:397)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.registerService(NamingProxy.java:212)
+	at com.alibaba.nacos.client.naming.NacosNamingService.registerInstance(NacosNamingService.java:207)
+	at com.alibaba.cloud.nacos.registry.NacosServiceRegistry.register(NacosServiceRegistry.java:64)
+	... 20 common frames omitted
+2020-10-10 10:54:53.749 [main] INFO  c.a.n.c.c.i.LocalConfigInfoProcessor -LOCAL_SNAPSHOT_PATH:C:\Users\123\nacos\config
+2020-10-10 10:54:53.765 [main] INFO  c.a.nacos.client.config.impl.Limiter -limitTime:5.0
+2020-10-10 10:54:55.777 [main] ERROR c.a.n.c.config.http.ServerHttpAgent -[NACOS SocketTimeoutException httpGet] currentServerAddr:http://192.168.31.75:8848， err : connect timed out
+2020-10-10 10:54:57.780 [main] ERROR c.a.n.c.config.http.ServerHttpAgent -[NACOS SocketTimeoutException httpGet] currentServerAddr:http://192.168.31.75:8848， err : connect timed out
+2020-10-10 10:54:57.780 [main] ERROR c.a.n.c.config.http.ServerHttpAgent -no available server
+2020-10-10 10:54:57.782 [main] ERROR c.a.n.c.config.impl.ClientWorker -[fixed-192.168.31.75_8848] [sub-server] get server config exception, dataId=yc-product-server-webapp-provider, group=DEFAULT_GROUP, tenant=
+java.net.ConnectException: no available server
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpGet(ServerHttpAgent.java:123)
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpGet(MetricsHttpAgent.java:48)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.getServerConfig(ClientWorker.java:230)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfigInner(NacosConfigService.java:143)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfig(NacosConfigService.java:92)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.loadNacosData(NacosPropertySourceBuilder.java:85)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.build(NacosPropertySourceBuilder.java:74)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosPropertySource(NacosPropertySourceLocator.java:204)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosDataIfPresent(NacosPropertySourceLocator.java:191)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadApplicationConfiguration(NacosPropertySourceLocator.java:142)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.locate(NacosPropertySourceLocator.java:103)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:52)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:47)
+	at org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration.initialize(PropertySourceBootstrapConfiguration.java:98)
+	at org.springframework.boot.SpringApplication.applyInitializers(SpringApplication.java:626)
+	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:370)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.artcreation.group.product.YcProductWebappProviderApplication.main(YcProductWebappProviderApplication.java:14)
+2020-10-10 10:54:57.783 [main] WARN  c.a.n.c.config.NacosConfigService -[fixed-192.168.31.75_8848] [get-config] get from server error, dataId=yc-product-server-webapp-provider, group=DEFAULT_GROUP, tenant=, msg=ErrCode:500, ErrMsg:no available server
+2020-10-10 10:54:57.784 [main] WARN  c.a.n.c.config.NacosConfigService -[fixed-192.168.31.75_8848] [get-config] get snapshot ok, dataId=yc-product-server-webapp-provider, group=DEFAULT_GROUP, tenant=, config=
+2020-10-10 10:54:57.784 [main] WARN  c.a.c.n.c.NacosPropertySourceBuilder -Ignore the empty nacos configuration and get it based on dataId[yc-product-server-webapp-provider] & group[DEFAULT_GROUP]
+2020-10-10 10:54:58.951 [main] ERROR c.a.n.c.config.http.ServerHttpAgent -[NACOS SocketTimeoutException httpGet] currentServerAddr:http://192.168.31.75:8848， err : connect timed out
+2020-10-10 10:54:58.958 [main] WARN  c.a.c.n.c.NacosPropertySourceBuilder -Ignore the empty nacos configuration and get it based on dataId[yc-product-server-webapp-provider.properties] & group[DEFAULT_GROUP]
+2020-10-10 10:54:58.959 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration -Located property source: [BootstrapPropertySource {name='bootstrapProperties-yc-product-server-webapp-provider.properties,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-yc-product-server-webapp-provider,DEFAULT_GROUP'}]
+2020-10-10 10:54:58.962 [main] INFO  c.a.g.p.YcProductWebappProviderApplication -No active profile set, falling back to default profiles: default
+2020-10-10 10:54:59.387 [main] WARN  o.s.boot.actuate.endpoint.EndpointId -Endpoint ID 'nacos-config' contains invalid characters, please migrate to a valid format.
+2020-10-10 10:54:59.389 [main] WARN  o.s.boot.actuate.endpoint.EndpointId -Endpoint ID 'nacos-discovery' contains invalid characters, please migrate to a valid format.
+2020-10-10 10:54:59.503 [main] WARN  o.s.boot.actuate.endpoint.EndpointId -Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-10-10 10:54:59.571 [main] INFO  o.s.cloud.context.scope.GenericScope -BeanFactory id=437a39e5-7459-370e-b3a8-0c4c0abdc29b
+2020-10-10 10:54:59.775 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat initialized with port(s): 9005 (http)
+2020-10-10 10:54:59.781 [main] INFO  o.a.catalina.core.StandardService -Starting service [Tomcat]
+2020-10-10 10:54:59.782 [main] INFO  o.a.catalina.core.StandardEngine -Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-10-10 10:54:59.864 [main] INFO  o.a.c.c.C.[.[localhost].[/product] -Initializing Spring embedded WebApplicationContext
+2020-10-10 10:54:59.865 [main] INFO  o.s.web.context.ContextLoader -Root WebApplicationContext: initialization completed in 895 ms
+2020-10-10 10:55:00.000 [main] INFO  com.alibaba.nacos.client.naming -initializer namespace from System Property :null
+2020-10-10 10:55:00.000 [main] INFO  com.alibaba.nacos.client.naming -initializer namespace from System Environment :null
+2020-10-10 10:55:00.001 [main] INFO  com.alibaba.nacos.client.naming -initializer namespace from System Property :null
+2020-10-10 10:55:00.307 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver -Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-10-10 10:55:00.343 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping -Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-10-10 10:55:00.354 [main] WARN  c.n.c.sources.URLConfigurationSource -No URLs will be polled as dynamic configuration sources.
+2020-10-10 10:55:00.354 [main] INFO  c.n.c.sources.URLConfigurationSource -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-10-10 10:55:00.357 [main] WARN  c.n.c.sources.URLConfigurationSource -No URLs will be polled as dynamic configuration sources.
+2020-10-10 10:55:00.357 [main] INFO  c.n.c.sources.URLConfigurationSource -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-10-10 10:55:00.412 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor -Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-10 10:55:00.471 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler -Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2020-10-10 10:55:00.625 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper -Context refreshed
+2020-10-10 10:55:00.637 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper -Found 1 custom documentation plugin(s)
+2020-10-10 10:55:00.655 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner -Scanning for api listing references
+2020-10-10 10:55:00.751 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat started on port(s): 9005 (http) with context path '/product'
+2020-10-10 10:55:00.754 [main] INFO  com.alibaba.nacos.client.naming -[BEAT] adding beat: {"cluster":"DEFAULT","ip":"192.168.31.75","metadata":{"preserved.register.source":"SPRING_CLOUD"},"period":5000,"port":9005,"scheduled":false,"serviceName":"DEFAULT_GROUP@@yc-product-server-webapp-provider","stopped":false,"weight":1.0} to beat map.
+2020-10-10 10:55:00.794 [main] INFO  com.alibaba.nacos.client.naming -[REGISTER-SERVICE] public registering service DEFAULT_GROUP@@yc-product-server-webapp-provider with instance: {"clusterName":"DEFAULT","enabled":true,"ephemeral":true,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ip":"192.168.31.75","ipDeleteTimeout":30000,"metadata":{"preserved.register.source":"SPRING_CLOUD"},"port":9005,"weight":1.0}
+2020-10-10 10:55:00.883 [main] INFO  c.a.c.n.r.NacosServiceRegistry -nacos registry, DEFAULT_GROUP yc-product-server-webapp-provider 192.168.31.75:9005 register finished
+2020-10-10 10:55:00.924 [main] INFO  c.a.g.p.YcProductWebappProviderApplication -Started YcProductWebappProviderApplication in 7.788 seconds (JVM running for 8.377)
+2020-10-10 10:55:00.933 [main] INFO  c.a.n.c.config.impl.ClientWorker -[fixed-192.168.31.75_8848] [subscribe] yc-product-server-webapp-provider.properties+DEFAULT_GROUP
+2020-10-10 10:55:00.934 [main] INFO  c.a.n.client.config.impl.CacheData -[fixed-192.168.31.75_8848] [add-listener] ok, tenant=, dataId=yc-product-server-webapp-provider.properties, group=DEFAULT_GROUP, cnt=1
+2020-10-10 10:55:00.934 [main] INFO  c.a.n.c.config.impl.ClientWorker -[fixed-192.168.31.75_8848] [subscribe] yc-product-server-webapp-provider+DEFAULT_GROUP
+2020-10-10 10:55:00.934 [main] INFO  c.a.n.client.config.impl.CacheData -[fixed-192.168.31.75_8848] [add-listener] ok, tenant=, dataId=yc-product-server-webapp-provider, group=DEFAULT_GROUP, cnt=1
+2020-10-10 10:55:00.953 [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.31.75_8848] INFO  c.a.n.c.config.impl.ClientWorker -get changedGroupKeys:[]
+2020-10-10 10:55:30.652 [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.31.75_8848] INFO  c.a.n.c.config.impl.ClientWorker -get changedGroupKeys:[]
+2020-10-10 10:56:00.156 [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.31.75_8848] INFO  c.a.n.c.config.impl.ClientWorker -get changedGroupKeys:[]
+2020-10-10 10:56:29.660 [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.31.75_8848] INFO  c.a.n.c.config.impl.ClientWorker -get changedGroupKeys:[]
+2020-10-10 10:56:59.165 [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.31.75_8848] INFO  c.a.n.c.config.impl.ClientWorker -get changedGroupKeys:[]
+2020-10-10 10:57:28.670 [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.31.75_8848] INFO  c.a.n.c.config.impl.ClientWorker -get changedGroupKeys:[]
+2020-10-10 10:57:58.173 [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.31.75_8848] INFO  c.a.n.c.config.impl.ClientWorker -get changedGroupKeys:[]
+2020-10-10 10:58:27.678 [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.31.75_8848] INFO  c.a.n.c.config.impl.ClientWorker -get changedGroupKeys:[]
+2020-10-10 10:58:57.181 [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.31.75_8848] INFO  c.a.n.c.config.impl.ClientWorker -get changedGroupKeys:[]
+2020-10-10 10:59:26.685 [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.31.75_8848] INFO  c.a.n.c.config.impl.ClientWorker -get changedGroupKeys:[]
+2020-10-10 10:59:56.190 [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.31.75_8848] INFO  c.a.n.c.config.impl.ClientWorker -get changedGroupKeys:[]
+2020-10-10 11:00:25.694 [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.31.75_8848] INFO  c.a.n.c.config.impl.ClientWorker -get changedGroupKeys:[]
+2020-10-10 11:00:55.198 [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.31.75_8848] INFO  c.a.n.c.config.impl.ClientWorker -get changedGroupKeys:[]
+2020-10-10 11:01:24.704 [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.31.75_8848] INFO  c.a.n.c.config.impl.ClientWorker -get changedGroupKeys:[]
+2020-10-10 11:01:54.210 [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.31.75_8848] INFO  c.a.n.c.config.impl.ClientWorker -get changedGroupKeys:[]
+2020-10-10 11:02:23.713 [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.31.75_8848] INFO  c.a.n.c.config.impl.ClientWorker -get changedGroupKeys:[]
+2020-10-10 11:02:53.216 [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.31.75_8848] INFO  c.a.n.c.config.impl.ClientWorker -get changedGroupKeys:[]
+2020-10-10 11:03:22.720 [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.31.75_8848] INFO  c.a.n.c.config.impl.ClientWorker -get changedGroupKeys:[]
+2020-10-10 11:03:52.226 [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.31.75_8848] INFO  c.a.n.c.config.impl.ClientWorker -get changedGroupKeys:[]
+2020-10-10 11:04:16.925 [http-nio-9005-exec-1] INFO  o.a.c.c.C.[.[localhost].[/product] -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-10 11:04:16.925 [http-nio-9005-exec-1] INFO  o.s.web.servlet.DispatcherServlet -Initializing Servlet 'dispatcherServlet'
+2020-10-10 11:04:16.930 [http-nio-9005-exec-1] INFO  o.s.web.servlet.DispatcherServlet -Completed initialization in 4 ms
+2020-10-10 11:04:21.733 [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.31.75_8848] INFO  c.a.n.c.config.impl.ClientWorker -get changedGroupKeys:[]
+2020-10-10 11:04:51.238 [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.31.75_8848] INFO  c.a.n.c.config.impl.ClientWorker -get changedGroupKeys:[]
+2020-10-10 11:05:09.061 [http-nio-9005-exec-3] INFO  c.a.g.p.controller.ConfigController -测试获取nacos配置中心信息
+2020-10-10 11:05:13.959 [http-nio-9005-exec-2] INFO  c.a.g.p.controller.ConfigController -测试获取nacos配置中心信息
+2020-10-10 11:05:20.742 [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.31.75_8848] INFO  c.a.n.c.config.impl.ClientWorker -get changedGroupKeys:[]
+2020-10-10 11:05:50.246 [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.31.75_8848] INFO  c.a.n.c.config.impl.ClientWorker -get changedGroupKeys:[]
+2020-10-10 11:06:19.753 [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.31.75_8848] INFO  c.a.n.c.config.impl.ClientWorker -get changedGroupKeys:[]
+2020-10-10 11:06:49.262 [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.31.75_8848] INFO  c.a.n.c.config.impl.ClientWorker -get changedGroupKeys:[]
+2020-10-10 11:32:44.107 [main] INFO  c.a.n.c.c.i.LocalConfigInfoProcessor -LOCAL_SNAPSHOT_PATH:C:\Users\123\nacos\config
+2020-10-10 11:32:44.123 [main] INFO  c.a.nacos.client.config.impl.Limiter -limitTime:5.0
+2020-10-10 11:32:44.139 [main] WARN  c.a.c.n.c.NacosPropertySourceBuilder -Ignore the empty nacos configuration and get it based on dataId[yc-repertory-server-webapp-provider] & group[DEFAULT_GROUP]
+2020-10-10 11:32:44.142 [main] WARN  c.a.c.n.c.NacosPropertySourceBuilder -Ignore the empty nacos configuration and get it based on dataId[yc-repertory-server-webapp-provider.properties] & group[DEFAULT_GROUP]
+2020-10-10 11:32:44.143 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration -Located property source: [BootstrapPropertySource {name='bootstrapProperties-yc-repertory-server-webapp-provider.properties,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-yc-repertory-server-webapp-provider,DEFAULT_GROUP'}]
+2020-10-10 11:32:44.146 [main] INFO  c.a.g.p.YcProductWebappProviderApplication -No active profile set, falling back to default profiles: default
+2020-10-10 11:32:44.561 [main] WARN  o.s.boot.actuate.endpoint.EndpointId -Endpoint ID 'nacos-config' contains invalid characters, please migrate to a valid format.
+2020-10-10 11:32:44.563 [main] WARN  o.s.boot.actuate.endpoint.EndpointId -Endpoint ID 'nacos-discovery' contains invalid characters, please migrate to a valid format.
+2020-10-10 11:32:44.683 [main] WARN  o.s.boot.actuate.endpoint.EndpointId -Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-10-10 11:32:44.754 [main] INFO  o.s.cloud.context.scope.GenericScope -BeanFactory id=437a39e5-7459-370e-b3a8-0c4c0abdc29b
+2020-10-10 11:32:44.959 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat initialized with port(s): 9006 (http)
+2020-10-10 11:32:44.966 [main] INFO  o.a.catalina.core.StandardService -Starting service [Tomcat]
+2020-10-10 11:32:44.966 [main] INFO  o.a.catalina.core.StandardEngine -Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-10-10 11:32:45.055 [main] INFO  o.a.c.c.C.[.[localhost].[/product] -Initializing Spring embedded WebApplicationContext
+2020-10-10 11:32:45.055 [main] INFO  o.s.web.context.ContextLoader -Root WebApplicationContext: initialization completed in 901 ms
+2020-10-10 11:32:45.202 [main] INFO  com.alibaba.nacos.client.naming -initializer namespace from System Property :null
+2020-10-10 11:32:45.203 [main] INFO  com.alibaba.nacos.client.naming -initializer namespace from System Environment :null
+2020-10-10 11:32:45.203 [main] INFO  com.alibaba.nacos.client.naming -initializer namespace from System Property :null
+2020-10-10 11:32:45.504 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver -Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-10-10 11:32:45.539 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping -Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-10-10 11:32:45.549 [main] WARN  c.n.c.sources.URLConfigurationSource -No URLs will be polled as dynamic configuration sources.
+2020-10-10 11:32:45.549 [main] INFO  c.n.c.sources.URLConfigurationSource -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-10-10 11:32:45.551 [main] WARN  c.n.c.sources.URLConfigurationSource -No URLs will be polled as dynamic configuration sources.
+2020-10-10 11:32:45.552 [main] INFO  c.n.c.sources.URLConfigurationSource -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-10-10 11:32:45.604 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor -Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-10 11:32:45.660 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler -Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2020-10-10 11:32:45.810 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper -Context refreshed
+2020-10-10 11:32:45.820 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper -Found 1 custom documentation plugin(s)
+2020-10-10 11:32:45.838 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner -Scanning for api listing references
+2020-10-10 11:32:45.932 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat started on port(s): 9006 (http) with context path '/product'
+2020-10-10 11:32:45.934 [main] INFO  com.alibaba.nacos.client.naming -[BEAT] adding beat: {"cluster":"DEFAULT","ip":"192.168.31.75","metadata":{"preserved.register.source":"SPRING_CLOUD"},"period":5000,"port":9006,"scheduled":false,"serviceName":"DEFAULT_GROUP@@yc-repertory-server-webapp-provider","stopped":false,"weight":1.0} to beat map.
+2020-10-10 11:32:45.973 [main] INFO  com.alibaba.nacos.client.naming -[REGISTER-SERVICE] public registering service DEFAULT_GROUP@@yc-repertory-server-webapp-provider with instance: {"clusterName":"DEFAULT","enabled":true,"ephemeral":true,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ip":"192.168.31.75","ipDeleteTimeout":30000,"metadata":{"preserved.register.source":"SPRING_CLOUD"},"port":9006,"weight":1.0}
+2020-10-10 11:32:45.980 [main] INFO  c.a.c.n.r.NacosServiceRegistry -nacos registry, DEFAULT_GROUP yc-repertory-server-webapp-provider 192.168.31.75:9006 register finished
+2020-10-10 11:32:46.021 [main] INFO  c.a.g.p.YcProductWebappProviderApplication -Started YcProductWebappProviderApplication in 2.815 seconds (JVM running for 4.016)
+2020-10-10 11:32:46.029 [main] INFO  c.a.n.c.config.impl.ClientWorker -[fixed-192.168.31.75_8848] [subscribe] yc-repertory-server-webapp-provider.properties+DEFAULT_GROUP
+2020-10-10 11:32:46.030 [main] INFO  c.a.n.client.config.impl.CacheData -[fixed-192.168.31.75_8848] [add-listener] ok, tenant=, dataId=yc-repertory-server-webapp-provider.properties, group=DEFAULT_GROUP, cnt=1
+2020-10-10 11:32:46.030 [main] INFO  c.a.n.c.config.impl.ClientWorker -[fixed-192.168.31.75_8848] [subscribe] yc-repertory-server-webapp-provider+DEFAULT_GROUP
+2020-10-10 11:32:46.030 [main] INFO  c.a.n.client.config.impl.CacheData -[fixed-192.168.31.75_8848] [add-listener] ok, tenant=, dataId=yc-repertory-server-webapp-provider, group=DEFAULT_GROUP, cnt=1
+2020-10-10 11:32:46.034 [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.31.75_8848] INFO  c.a.n.c.config.impl.ClientWorker -get changedGroupKeys:[]
+2020-10-10 11:32:49.108 [http-nio-9006-exec-1] INFO  o.a.c.c.C.[.[localhost].[/product] -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-10 11:32:49.108 [http-nio-9006-exec-1] INFO  o.s.web.servlet.DispatcherServlet -Initializing Servlet 'dispatcherServlet'
+2020-10-10 11:32:49.112 [http-nio-9006-exec-1] INFO  o.s.web.servlet.DispatcherServlet -Completed initialization in 4 ms
+2020-10-10 11:33:15.737 [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.31.75_8848] INFO  c.a.n.c.config.impl.ClientWorker -get changedGroupKeys:[]
+2020-10-10 11:33:45.242 [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.31.75_8848] INFO  c.a.n.c.config.impl.ClientWorker -get changedGroupKeys:[]
+2020-10-10 11:34:14.744 [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.31.75_8848] INFO  c.a.n.c.config.impl.ClientWorker -get changedGroupKeys:[]
+2020-10-10 11:34:44.247 [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.31.75_8848] INFO  c.a.n.c.config.impl.ClientWorker -get changedGroupKeys:[]
+2020-10-10 11:35:13.752 [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.31.75_8848] INFO  c.a.n.c.config.impl.ClientWorker -get changedGroupKeys:[]
+2020-10-10 11:35:43.255 [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.31.75_8848] INFO  c.a.n.c.config.impl.ClientWorker -get changedGroupKeys:[]
+2020-10-10 11:36:12.759 [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.31.75_8848] INFO  c.a.n.c.config.impl.ClientWorker -get changedGroupKeys:[]
+2020-10-10 11:36:42.263 [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.31.75_8848] INFO  c.a.n.c.config.impl.ClientWorker -get changedGroupKeys:[]
+2020-10-10 11:37:11.767 [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.31.75_8848] INFO  c.a.n.c.config.impl.ClientWorker -get changedGroupKeys:[]
+2020-10-10 11:37:41.270 [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.31.75_8848] INFO  c.a.n.c.config.impl.ClientWorker -get changedGroupKeys:[]
+2020-10-10 11:38:10.775 [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.31.75_8848] INFO  c.a.n.c.config.impl.ClientWorker -get changedGroupKeys:[]
+2020-10-10 11:38:40.279 [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.31.75_8848] INFO  c.a.n.c.config.impl.ClientWorker -get changedGroupKeys:[]
+2020-10-10 11:39:09.782 [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.31.75_8848] INFO  c.a.n.c.config.impl.ClientWorker -get changedGroupKeys:[]
+2020-10-10 11:39:39.286 [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.31.75_8848] INFO  c.a.n.c.config.impl.ClientWorker -get changedGroupKeys:[]
+2020-10-10 11:40:08.789 [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.31.75_8848] INFO  c.a.n.c.config.impl.ClientWorker -get changedGroupKeys:[]
+2020-10-10 11:40:38.293 [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.31.75_8848] INFO  c.a.n.c.config.impl.ClientWorker -get changedGroupKeys:[]
+2020-10-10 11:41:07.796 [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.31.75_8848] INFO  c.a.n.c.config.impl.ClientWorker -get changedGroupKeys:[]
+2020-10-10 11:41:37.298 [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.31.75_8848] INFO  c.a.n.c.config.impl.ClientWorker -get changedGroupKeys:[]
+2020-10-10 11:42:06.802 [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.31.75_8848] INFO  c.a.n.c.config.impl.ClientWorker -get changedGroupKeys:[]
+2020-10-10 11:42:36.306 [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.31.75_8848] INFO  c.a.n.c.config.impl.ClientWorker -get changedGroupKeys:[]
+2020-10-10 11:43:05.808 [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.31.75_8848] INFO  c.a.n.c.config.impl.ClientWorker -get changedGroupKeys:[]
+2020-10-10 11:43:35.311 [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.31.75_8848] INFO  c.a.n.c.config.impl.ClientWorker -get changedGroupKeys:[]
+2020-10-10 11:44:04.816 [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.31.75_8848] INFO  c.a.n.c.config.impl.ClientWorker -get changedGroupKeys:[]
+2020-10-10 11:44:34.318 [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.31.75_8848] INFO  c.a.n.c.config.impl.ClientWorker -get changedGroupKeys:[]
+2020-10-10 11:45:03.822 [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.31.75_8848] INFO  c.a.n.c.config.impl.ClientWorker -get changedGroupKeys:[]
+2020-10-10 11:45:33.325 [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.31.75_8848] INFO  c.a.n.c.config.impl.ClientWorker -get changedGroupKeys:[]

@@ -1,0 +1,17 @@
+server:
+  port: 9006
+  servlet:
+    context-path: /repertory
+spring:
+  application:
+    name: yc-repertory-server-webapp-provider
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.31.75:8848
+
+product:
+  category:
+    name: 艺术品
+    id: 001
